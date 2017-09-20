@@ -63,7 +63,7 @@ export class MysqlDriver extends AbstractDriver {
                     case "tinyint":
                         if (resp.NUMERIC_PRECISION == 3) {
                             colInfo.ts_type = "boolean"
-                            colInfo.sql_type = "boolean"
+                            colInfo.sql_type = "tinyint"
                         } else {
                             colInfo.ts_type = "number"
                             colInfo.sql_type = "smallint"
@@ -75,7 +75,7 @@ export class MysqlDriver extends AbstractDriver {
                         break;
                     case "bit":
                         colInfo.ts_type = "boolean"
-                        colInfo.sql_type = "boolean"
+                        colInfo.sql_type = "tinyint"
                         break;
                     case "float":
                         colInfo.ts_type = "number"
@@ -99,7 +99,7 @@ export class MysqlDriver extends AbstractDriver {
                         break;
                     case "char":
                         colInfo.ts_type = "string"
-                        colInfo.sql_type = "text"
+                        colInfo.sql_type = "char"
                         break;
                     case "nchar":
                         colInfo.ts_type = "string"
@@ -115,11 +115,11 @@ export class MysqlDriver extends AbstractDriver {
                         break;
                     case "varchar":
                         colInfo.ts_type = "string"
-                        colInfo.sql_type = "string"
+                        colInfo.sql_type = "varchar"
                         break;
                     case "nvarchar":
                         colInfo.ts_type = "string"
-                        colInfo.sql_type = "string"
+                        colInfo.sql_type = "varchar"
                         break;
                     case "money":
                         colInfo.ts_type = "number"
