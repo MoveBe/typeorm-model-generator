@@ -7,7 +7,7 @@ export class ColumnInfo {
     default: string | null = null;
     is_nullable: boolean = false;
     ts_type: 'number' | 'string' | 'boolean' | 'Date' | 'any';
-    sql_type: "string" | "text" | "number" | "integer" | "int" | "smallint" | "bigint" |
+    sql_type: "char" | "varchar" | "string" | "text" | "number" | "integer" | "int" | "tinyint" | "smallint" | "bigint" |
     "float" | "double" | "decimal" | "date" | "time" | "datetime" | "boolean" | "json";
     char_max_lenght: number | null = null;
     isPrimary: boolean = false;
